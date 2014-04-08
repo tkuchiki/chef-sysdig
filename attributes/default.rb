@@ -1,0 +1,3 @@
+default[:sysdig] = {
+  :action => :install,
+}
