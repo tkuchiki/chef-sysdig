@@ -14,7 +14,7 @@ bash "install-sysdig" do
   not_if "which sysdig"
 end
 
-if node[:sysdig][:action] != :install
+unless node[:sysdig][:action].nil?
   package "sysdig" do
     action node[:sysdig][:action]
   end
